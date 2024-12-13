@@ -10,10 +10,11 @@ void patterns_with_digits_1();
 void patterns_with_digits_2();
 void patterns_with_digits_3();
 //void patterns_with_digits_4();
+void patterns_with_characters_1();
 
 void main(){
 	int opt;
-	printf("1.pattern A\n2.pattern B\n3.pattern C");
+	printf("1.pattern 1\n2.pattern 2\n3.pattern 3\n4.pattern 4\nEnter your choice : ");
 	scanf("%d",&opt);
 	switch(opt){
 		case 1:
@@ -24,6 +25,9 @@ void main(){
 			break;
 		case 3:
 			patterns_with_digits_3();
+			break;
+		case 4:
+			patterns_with_characters_1();
 			break;
 		default:
 			printf("option not given");
@@ -66,5 +70,23 @@ void patterns_with_digits_3(){
 	}
 }
 
+void patterns_with_characters_1(){
+	for(int i=0;i<triangle_height;i++){
+		for(int j=0;j<i;j++){
+			printf("*");
+		}
+		for(int k=triangle_height-i;k>1;k--){
+			printf("-");
+		}
+		for(int l=triangle_height-i;l>1;l--){
+			printf("-");
+		}
+		for(int j=0;j<i;j++){
+			printf("*");
+		}
+
+		printf("\n");
+	}
+}
 
 
